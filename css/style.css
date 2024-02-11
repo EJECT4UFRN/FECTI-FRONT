@@ -127,6 +127,10 @@ body {
 	color: #fff;
 }
 
+.protagonistas-title {
+	margin-top: 32%;
+}
+
 .container-purpose p {
 	color: #FFF;
 	font-family: "Montserrat";
@@ -140,8 +144,9 @@ body {
 }
 
 .section-members {
-	display: flex;
-	flex-direction: row;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	/*grid-gap: 20px;*/
 	align-items: center;
 	justify-content: center;
 }
@@ -153,12 +158,11 @@ body {
 	justify-content: flex-end;
 
 	height: 350px;
-	width: calc(100% / 4);
+	width: 100%;
 
 	background-size: cover;
 	background-position: center;
 	padding: 0 20px;
-
 }
 
 .card-member .member-name {
