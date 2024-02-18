@@ -88,7 +88,7 @@
 			</div>
 		</section>
 
-		<section class="section-members">
+		<!--<section class="section-members">
 			<div class="card-member card-member-1">
 				<img
 					src="./assets/imgs/members/person.png"
@@ -129,6 +129,85 @@
 				/>
 				<p class="member-name">Paula Cardoso</p>
 				<p class="member-role">CEO</p>
+			</div>
+		</section>-->
+
+		<section class="section-new-protagonistas">
+			<div class="rmove_flex">
+				<div class="rmove_flex protagonistas_carousel">
+					<div class="carousel-cell nopadding protagonista_cell">
+						<a target="_blank" href="google">
+							<img
+								src="./assets/imgs/members/person.png"
+								alt=""
+							/>
+							<div class="protagonista_text">
+								<p class="member-name">Paula Cardoso</p>
+								<p class="member-role">CEO</p>
+							</div>
+						</a>
+					</div>
+					<div class="carousel-cell nopadding protagonista_cell">
+						<a target="_blank" href="google">
+							<img
+								src="./assets/imgs/members/person2.png"
+								alt=""
+							/>
+							<div class="protagonista_text">
+								<p class="member-name">Paula Cardoso</p>
+								<p class="member-role">CEO</p>
+							</div>
+						</a>
+					</div>
+					<div class="carousel-cell nopadding protagonista_cell">
+						<a target="_blank" href="google">
+							<img
+								src="./assets/imgs/members/person3.png"
+								alt=""
+							/>
+							<div class="protagonista_text">
+								<p class="member-name">Paula Cardoso</p>
+								<p class="member-role">CEO</p>
+							</div>
+						</a>
+					</div>
+					<div class="carousel-cell nopadding protagonista_cell">
+						<a target="_blank" href="google">
+							<img
+								src="./assets/imgs/members/person4.png"
+								alt=""
+							/>
+							<div class="protagonista_text">
+								<p class="member-name">Paula Cardoso</p>
+								<p class="member-role">CEO</p>
+							</div>
+						</a>
+					</div>
+					<div class="carousel-cell nopadding protagonista_cell">
+						<a target="_blank" href="google">
+							<img
+								src="./assets/imgs/members/person4.png"
+								alt=""
+							/>
+							<div class="protagonista_text">
+								<p class="member-name">Paula Cardoso</p>
+								<p class="member-role">CEO</p>
+							</div>
+						</a>
+					</div>
+					<div class="carousel-cell nopadding protagonista_cell">
+						<a target="_blank" href="google">
+							<img
+								src="./assets/imgs/members/person4.png"
+								alt=""
+							/>
+							<div class="protagonista_text">
+								<p class="member-name">Paula Cardoso</p>
+								<p class="member-role">CEO</p>
+							</div>
+						</a>
+					</div>
+				</div>
 			</div>
 		</section>
 
@@ -204,6 +283,15 @@
 			<button class="btn btn-primary">Inscreva-se</button>
 			<button class="btn btn-secondary">Submeter Projeto</button>
 		</div>
+
+		<!-- video de tutorial de inscrição -->
+		<section class="section-tutorial">
+			<h2 class="tutorial-title">Tutorial de Inscrição</h2>
+
+			<!-- quando for colocar o link do video tem que copiar o embeded e substituir o iframe -->
+			<div class="tutorial-video">
+				<iframe  src="https://www.youtube.com/embed/1YBtzAAChU8" title="Lofi Girl - Christmas 2023 🎄" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			</div>
 
 		<section class="section-programacao">
 			<h2 class="prog-title">Detalhes do Evento</h2>
@@ -339,34 +427,43 @@
 				</div>
 			</div>
 		</section>
+
+		<footer>
+			<p>SIMPÓSIO© 2024 . Desenvolvido pela EJECT</p>
+		</footer>
 		<!-- JavaScript -->
 		<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 		<script src="./js/main.js"></script>
 
 		<script>
-			let elem = document.querySelector('.main-carousel')
-			let flkty = new Flickity(elem, {
-				// options
-				cellAlign: 'center',
-				wrapAround: true,
-				//pageDots: false,
-				groupCells: 1,
-			})
-			function handleWindowSize() {
-				console.log('Tamanho da tela: ', window.innerWidth)
-				if (window.innerWidth < 1024) {
-					console.log('mobile')
-					flkty.destroy()
-					flkty = new Flickity(elem, {
-						// options
-						cellAlign: 'center',
-						percentPosition: true,
-						//pageDots: false,
-						groupCells: 1,
-					})
+			function createCarousels(element) {
+				let elem = document.querySelector(element)
+				let flkty = new Flickity(elem, {
+					// options
+					cellAlign: 'center',
+					wrapAround: true,
+					//pageDots: false,
+					groupCells: 1,
+				})
+				function handleWindowSize() {
+					console.log('Tamanho da tela: ', window.innerWidth)
+					if (window.innerWidth < 1024) {
+						console.log('mobile')
+						flkty.destroy()
+						flkty = new Flickity(elem, {
+							// options
+							cellAlign: 'center',
+							percentPosition: true,
+							//pageDots: false,
+							groupCells: 1,
+						})
+					}
 				}
+				window.addEventListener('resize', handleWindowSize)
 			}
-			window.addEventListener('resize', handleWindowSize)
+
+			createCarousels('.main-carousel')
+			createCarousels('.protagonistas_carousel')
 		</script>
 	</body>
 </html>

@@ -8,6 +8,14 @@ body {
 	background: linear-gradient(173deg, #004056 7.86%, #1B6886 16.11%, #1D699A 29.93%, #44A5D0 40.32%, #3489CD 63.41%, #2A7BB6 73.82%, #1D699A 88.31%, #004056 98.9%);
 }
 
+.eject {
+	cursor: pointer;
+}
+
+.hero-prog {
+	cursor: pointer;
+}
+
 .section-hero {
 	background-image: url('../assets/imgs/hero.png');
 	background-size: cover;
@@ -128,7 +136,7 @@ body {
 }
 
 .protagonistas-title {
-	margin-top: 32%;
+	margin-top: 12%;
 }
 
 .container-purpose p {
@@ -165,13 +173,13 @@ body {
 	padding: 0 20px;
 }
 
-.card-member .member-name {
+.member-name {
 	font-family: Monomaniac One;
 	font-size: 30px;
 	color: white;
 }
 
-.card-member .member-role {
+.member-role {
 	font-family: Montserrat;
 	font-size: 20px;
 	color: white;
@@ -277,7 +285,7 @@ body {
 	color: #FFF;
 	text-align: center;
 	font-family: "Monomaniac One";
-	font-size: 30px;
+	font-size: 24px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
@@ -401,6 +409,10 @@ body {
 	padding: 0 20px;
 }
 
+.nopadding {
+	padding: 0;
+}
+
 .line-cor {
 	margin-bottom: 20px;
 }
@@ -420,9 +432,77 @@ body {
 	display: unset;
 }
 
+.protagonista_cell {
+	position: relative;
+}
 
+.protagonista_cell img {
+	filter: brightness(0.9);
+	cursor: pointer;
+
+	transition: 0.2s ease-in-out all;
+}
+
+.protagonista_cell img:hover {
+	filter: brightness(1);
+}
+
+.protagonista_cell .protagonista_text {
+	position: absolute;
+	top: 78%;
+	left: 5%;
+	/*transform: translate(-50%, -50%);*/
+	color: white;
+}
+
+.buttons .btn {
+	text-decoration: none;
+}
+
+/*.section-tutorial {
+	width: 100%;
+}*/
+
+.tutorial-video {
+	width: 100%;
+	display: flex;
+}
+
+.tutorial-title {
+	text-align: center;
+	font-family: "Monomaniac One";
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 400;
+	color: white;
+}
+
+.tutorial-video iframe {
+	/* manter aspect ratio */
+	width: 700px;
+	height: 400px;
+	margin: 0 auto;
+	border-radius: 10px;
+	margin-top: 5px;
+	margin-bottom: 40px;
+
+
+}
+
+footer {
+	font-family: Montserrat;
+	background: #002953;
+	color: #FFF;
+	text-align: center;
+	padding: 20px 0;
+}
 
 @media (max-width: 768px) {
+	.tutorial-video iframe {
+		width: 80%;
+		height: 300px;
+	}
+
 	.container-hero {
 		padding-top: 50px;
 	}
@@ -480,11 +560,11 @@ body {
 		width: calc(100% / 2);
 	}
 
-	.card-member .member-name {
+	.member-name {
 		font-size: 24px;
 	}
 
-	.card-member .member-role {
+	.member-role {
 		font-size: 16px;
 	}
 
