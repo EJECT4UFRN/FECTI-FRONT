@@ -186,6 +186,14 @@ body {
 	font-weight: 600;
 }
 
+.carousel-cell a img {
+	width: 335px;
+	height: 350px;
+	object-fit: cover;
+}
+
+
+
 /*.card-member-1 {
 	background-image: url('../assets/imgs/members/person.png');
 }
